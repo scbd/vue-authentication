@@ -1,0 +1,44 @@
+{
+  "name": "@biodiversity/vue-authentication",
+  "version": "0.1.1",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build src/Authentication.js --target lib --name VueAuthentication",
+    "lint": "vue-cli-service lint",
+    "release": "yarn publish --access=public"
+  },
+  "main": "dist/VueAuthentication.umd.min.js",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.16",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.16",
+    "@vue/cli-service": "^3.0.0-beta.16",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
