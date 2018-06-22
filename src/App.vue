@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     Iframe Installed <br>
-    user:<pre>{{this.$store.state.me | json}}</pre>
+    user:<pre>{{this.$me | json}}</pre>
   </div>
 </template>
 
