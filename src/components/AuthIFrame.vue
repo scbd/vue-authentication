@@ -23,7 +23,8 @@
       loaded:loaded
     },
     mounted:function(){
-      window.addEventListener('message', receiveMessage)
+      if (typeof window !== 'undefined')
+        window.addEventListener('message', receiveMessage)
 
       this.$refs.authFrame.onload = () => {
         this.$refs.authFrame.contentWindow.postMessage(JSON.stringify({ type : 'getAuthenticationToken' }), this.accountsBaseUrl);
@@ -35,6 +36,7 @@
 
   function loaded(){
     return new Promise(this.loadedTimeout).then((t)=>{
+      if (typeof window !== 'undefined') 
       window.removeEventListener('message', receiveMessage)
       return t
     })
